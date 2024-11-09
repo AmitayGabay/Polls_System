@@ -63,6 +63,21 @@
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 			<version>3.1.6</version>
 		</dependency>
+
+		<!--		For MYSQL -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.28</version>
+		</dependency>
+
+		<!-- For Swagger -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.6.14</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

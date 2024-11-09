@@ -1,18 +1,36 @@
 server:
   port : 8080
 
+# For H2
+#spring:
+#  datasource:
+#    url: jdbc:h2:mem:mydb
+#    username: sa
+#    password: password
+#    driverClassName: org.h2.Driver
+#  jpa:
+#    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+#  h2:
+#    console:
+#      enabled: true
+
+# For MYSQL
 spring:
   datasource:
-    url: jdbc:h2:mem:mydb
-    username: sa
-    password: password
-    driverClassName: org.h2.Driver
+    url: jdbc:mysql://sql7.freemysqlhosting.net:3306/sql7743719?serverTimezone=UTC
+    username: sql7743719
+    password: Z6hjAQ7XnY
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
-    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
-  h2:
-    console:
-      enabled: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  main:
+    allow-circular-references: true
 
 externalApi:
   users:
-    url:  http://localhost:8090/users
+    url: https://users-system.onrender.com/users
+#   For localhost
+#   url:  http://localhost:8090/users
