@@ -16,10 +16,17 @@ server:
 
 # For MYSQL
 spring:
+  # old DB
+#  datasource:
+#    url: jdbc:mysql://sql7.freemysqlhosting.net:3306/sql7743719?serverTimezone=UTC
+#    username: sql7743719
+#    password: Z6hjAQ7XnY
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+  # new DB
   datasource:
-    url: jdbc:mysql://sql7.freemysqlhosting.net:3306/sql7743719?serverTimezone=UTC
-    username: sql7743719
-    password: Z6hjAQ7XnY
+    url: jdbc:mysql://m1.db.pie.host:3306/pollssystem?serverTimezone=UTC
+    username: pollssystem_user
+    password: WytPxoikDao9MGay
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     database-platform: org.hibernate.dialect.MySQL8Dialect
